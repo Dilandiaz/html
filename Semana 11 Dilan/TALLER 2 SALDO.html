@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASAJE TM</title>
+    <!-- link de sitio sweet alert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./IMG/transmilenio.jpeg" alt="" width="150" height="150">
+        <h1>TALLER VERIFICAR SALDO DE TARJETA TRANSMILENIO</h1>
+        <h2>PASAJE MINNIMO $2.950</h2>
+        <script>
+            let saldo;
+            const TM=2950;
+            //ENTRADA
+            saldo=parseInt(prompt("INGRESE RECARGA DE SU TARJETA"));
+            // seccion condicional
+            if(saldo>=TM){
+                swal("Estiamdo susuario","INGRESE AL SISTEMA TRANSMILENIO","success");
+                document.write("BIENVENIDO AL TRANSMILENIO");
+            }else{
+                swal("Estiamdo susuario","SALDO INSUFICIENTE","error");
+                document.write("RECARGUE TARJETA TRANSMILENIO");
+            }
+        </script>
+    </center>
+</body>
+</html>
