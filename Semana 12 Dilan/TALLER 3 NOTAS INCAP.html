@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETIN DE NOTAS</title>
+    <!-- link de sitio sweet alert mensajes más elegantes-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <img src="./IMG/incap.jpeg" alt="" width="150" height="150">
+    <h1>BOLETIN DE NOTAS SEMESTRE A2024</h1>
+    <h2>MATERIA PAE JAVA SCRIPT</h2>
+    <h3>NOTAS [1= DESEMPEÑO - 2=TALLERES EN CLASE - 3=CUESTIONARIO]</h3>
+    <br>
+    <script>
+        let nota_std,suma_nota,prom;
+        suma_nota=0;//sumador de notas
+        prom=0;//calcular nota definitiva
+        num=1;//contador de notas
+        //ENTRADA
+        nombre_std=prompt("INGRESE NOMBRE DE ESTUDIANTE");
+        //CICLO WHILE
+        while(num<=3){
+            nota_std=parseFloat(prompt("INGRESE NOTA [1 A 5]"));
+            //ACUMULADOR
+            suma_nota+=nota_std;//totalizar de notas
+            //contador
+            num++;
+        }
+        //CALCULAR NOTA FINAL
+        prom=suma_nota/3;
+        //CONDICIONAL
+        if(prom>=3.0){
+            swal("APRECIADO ESTUDIANTE","FELICITACIONES APROBASTE LA MATERIA PAE JAVASCRIPT","success");
+            document.write("ESTUDIANTE PASA AL SIGUIENTE NIVEL DE PROGRAMACION PHP");
+        }else{
+            swal("APRECIADO ESTUDIANTE","RAPROBASTE LA MATERIA PAE JAVASCRIPT","error");
+            document.write("ESTUDIANTE DEBES DE HACER CURSO REMEDIAL DE RECUPERACION");
+        }
+        //SALIDA
+        document.write("<br>"+"<br>");
+        document.write("**************************************"+"<br>");
+        document.write("ESTUDIANTE"+nombre_std+"<br>");
+        document.write("NOTA FINAL DE LA MATERIA PAE ES.."+prom.toFixed(2)+"<br>");
+        document.write("**************************************"+"<br>");
+    </script>
+</body>
+</html>
