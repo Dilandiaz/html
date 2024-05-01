@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays2</title>
+</head>
+<body>
+    <center>
+        <h1>TALLER CAPTURA Y LECTURA ARRAYS</h1>
+        <h2>DATOS INGRESADOS POR USUARIO</h2>
+        <br><br>
+        <script>
+            let datos=new Array();//creacion como objeto de js
+            //captura
+            let num=parseInt(prompt("INGRESE TOPE MAXIMO EN ARRAY"));
+            //CICLO FOR CAPTURA
+            for(i=0;i<num;i++){
+                datos[i]=prompt("INGRESE DATOS A GUARDAR");
+            }
+            //CICLO FOR - LECTURA
+            for(i=0;i<num;i++){
+                document.write("****************"+"<br>");
+                document.write("Indice ..."+i+":"+datos[i]+"<br>");
+                console.log(datos[i]);
+            }
+        </script>
+    </center>
+</body>
+</html>

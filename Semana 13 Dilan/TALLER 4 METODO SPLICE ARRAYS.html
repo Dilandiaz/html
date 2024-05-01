@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays 4</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO SPLICE ARRAYS</h1>
+        <h2>ELIMINAR ELEMENTOS ARRAYS</h2>
+        <br><br>
+        <p>EL NUEVO ARRAYS ES EL SIGUIENTE:</p>
+        <br>
+        <script>
+            let std=new Array();
+            let num=parseInt(prompt("INGRESE TOPE MAXIMO"));//LONGITUD ARRAY
+            //CICLO FOR
+            for(i=0;i<num;i++){
+                std[i]=prompt("INGRESE NOMBRE..."+i);
+            }
+            //
+            let borrar=prompt("INGRESE NOMBRE A BORRAR");
+            //LOCALIZAR ELEMENTO ARRAY
+            let find=std.indexOf(borrar.trim());
+            //condicional para eliminar elemento
+            if(find>-1){
+                swal("Apreciado usuario","NOMBRE FUE ELIMINADO DE ARRAY","success");
+                var index=std.splice(find,1);
+            }else{
+                swal("Apreciado usuario","NOMBRE NO FUE ELIMINADO DE ARRAY","error");
+            }
+            //generar nuevo arrays actualizado
+            document.write(std+",");
+            console.log(std);
+        </script>
+    </center>
+</body>
+</html>

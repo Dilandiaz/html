@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo indexOf</title>
+    <!-- link de sitio Sweetalert mensajes más elegantes-->
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+</head>
+<body>
+    <center>
+        <h1>TALLER METODO indexOf</h1>
+        <h2>BUSQUEDA DE ELEMENTOS EN ARRAYS</h2>
+        <br><br>
+        <p>Estudiante se encuentra en el indice No.</p>
+        <p id="std"></p>
+        <script>
+            let std=new Array();
+            //captura
+            let num=parseInt(prompt("INGRESE TOPE MAXIMO"));
+            //CICLO FOR - CAPTURA
+            for(i=0;i<num;i++){
+                std[i]=prompt("INGRESE NOMBRE..."+i);
+            }
+            //BUSCAR NOMBRE EN ARRAY
+            let buscar=prompt("INGRESE NOMBRE A BUSCAR EN ARRAY");
+            //PROCESO DE METODO indexOf
+            let find=std.indexOf(buscar.trim());
+            //indexOf es para buscar y genera el indice del elemento encontrado
+            //trim es para eliminar los espacio innecesarios a la izq y der de la plabra
+            // condicional para verificar localizacion del elemento en array
+            if(find>-1){
+                //indexOf genera el indice de localizacionen caso de ser verdadero pero cuando no lo encuentra genera -1
+                swal("APRECIADO USUARIO","NOMBRE ENCONTRADO..","success");
+                document.getElementById("std").innerHTML=find+"..."+buscar;
+            }else{
+                swal("APRECIADO USUARIO","NOMBRE NO ENCONTRADO..","error");
+                document.getElementById("std").innerHTML=find+"ERROR.. NOMBRE NO LOCALIZADO EN ARRAY"+buscar;
+            }
+        </script>
+    </center>
+</body>
+</html>
