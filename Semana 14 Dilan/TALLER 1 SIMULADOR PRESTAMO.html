@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento oneclick js</title>
+    <!-- seccion de enlaces de archivos externos -->
+    <link rel="stylesheet" href="./CSS/SIMULADOR.css">
+    <script src="./JS/SIMULADOR.js"></script>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <form action="" class="form">
+                <label for="">Valor $ Credito</label>
+                <input type="text" id="valorc" class="box">
+                <label for="">Numero de cuotas mensuales</label>
+                <input type="text" id="numc" class="box">
+                <label for="">Tasa de intereses mensuales</label>
+                <input type="text" id="interes" class="box">
+                <label for="">Valor $ cuota mensual a pagar </label>
+                <input type="text" id="valora" class="box" disabled>
+                <label for="">Valor $ prestamo</label>
+                <input type="text" id="valorb" class="box" disabled>
+                <!-- seccion botones -->
+                <input type="button" value="Calcular" class="submit" onclick="calcular();">
+                <input type="button" value="Borrar" class="submit" onclick="limpiar();">
+            </form>
+        </div>
+    </center>
+</body>
+</html>
