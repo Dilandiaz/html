@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONCHANGE</title>
+    <!-- LINK PAGINA FONTAWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./CSS/ONCHANGE.css">
+</head>
+<body>
+    <center>
+        <div>
+            <h1>BOTON TOGGLE DARK-LIGHT</h1>
+            <h2>EVENTO ONCHANGE - METODO ADDEVENTLISTENER</h2>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nostrum officia eum, impedit quos maiores quasi laudantium mollitia vitae placeat sint nihil omnis aut alias fugiat libero, quisquam ullam expedita?</p>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat id aspernatur, voluptatum nam, similique placeat error pariatur dolore, beatae ab tempore. Ipsa, illum animi. Impedit optio commodi nisi molestias mollitia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ratione accusantium et odit consectetur, maxime, quasi deleniti rerum ut, laboriosam rem provident illo? Voluptate rem veritatis sed perferendis doloribus alias.</p>
+            <br><br>
+            <!-- seccion boton toggle dark-light (claro/oscuro) -->
+            <input type="checkbox" class="checkbox" id="chk">
+            <label for="chk" class="label">
+                <i class="fas fa-sun"></i>
+                <i class="fas fa-mon"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+    </center>
+    <script>
+        let chk=document.getElementById('chk');
+        chk.addEventListener('change',()=>{
+            document.body.classList.toggle('dark');// esta en css body.dark
+        })
+    </script>
+</body>
+</html>
