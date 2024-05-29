@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO CHECKED</title>
+    <link rel="stylesheet" href="./css/FACTURA.css">
+</head>
+<body>
+    <center>
+        <h1>LENGUAJES DE PROGRAMACION ACTUALES</h1>
+        <h2>SELECCIONE LOS PROGRAMAS A ESTUDIAR</h2>
+        <br><br>
+        <form action="">
+            <table>
+                <tr><th>Nombre</th><td><input type="text" size="20"></td></tr>
+                <tr><th colspan="4">LENGUAJES PROGRAMACION</th></tr>
+                <td colspan="4"><input type="checkbox" id="len01">Javascript</td></tr>
+                <tr><td colspan="4"><input type="checkbox" id="len02">Python</td></tr>
+                <tr><td colspan="4"><input type="checkbox" id="len03">PHP</td></tr>
+                <tr><td colspan="4"><input type="checkbox" id="len04">C#</td></tr>
+                <tr><td colspan="4"><input type="button" value="Seleccionar" onclick="mostrar();"></td></tr>
+                <td colspan="4"><input type="button" value="Borrar"></td></tr>
+                <tr><th>Lenguajes seleccionados</th><td><input type="text" id="resp" size="40"></td></tr>
+            </table>
+        </form>
+    </center>
+    <script src="./js/lenguajes.js"></script>
+</body>
+</html>
